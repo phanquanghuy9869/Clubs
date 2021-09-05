@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="MediatR.Extensions.Microsoft.DependencyInjection" />
+    <None Remove="MediatR" />
+    <None Remove="AggregateModel\" />
+    <None Remove="SeedWorks\" />
+    <None Remove="AggregateModels\ClubAggregate\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="9.0.0" />
+    <PackageReference Include="MediatR" Version="9.0.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="AggregateModels\" />
+    <Folder Include="SeedWorks\" />
+    <Folder Include="AggregateModels\ClubAggregate\" />
+  </ItemGroup>
+</Project>
