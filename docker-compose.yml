@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  clubs.api:
+    image: ${DOCKER_REGISTRY-}clubs
+    build:
+      context: .
+      dockerfile: Clubs.Api/Dockerfile
