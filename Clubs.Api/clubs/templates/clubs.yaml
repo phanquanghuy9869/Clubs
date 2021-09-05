@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: clubs
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: clubs 
+  template:
+    metadata:
+      labels:
+        app: clubs
+    spec:
+      containers:
+      - image: phanquanghuy9869/clubs
+        imagePullPolicy: Always
+        name: clubs
+        ports:
+        - name: clubs
+          containerPort: 80
+

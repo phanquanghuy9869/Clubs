@@ -31,7 +31,6 @@
     <None Remove="Models\" />
     <None Remove="Microsoft.EntityFrameworkCore.Sqlite" />
     <None Remove="Dapper" />
-    <None Remove="Helm\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Controllers\" />
@@ -40,7 +39,6 @@
     <Folder Include="CQRS\Queries\" />
     <Folder Include="Extensions\" />
     <Folder Include="Models\" />
-    <Folder Include="Helm\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Clubs.Domain\Clubs.Domain.csproj">

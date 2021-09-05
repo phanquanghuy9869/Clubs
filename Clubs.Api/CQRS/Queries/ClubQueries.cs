@@ -28,7 +28,7 @@ namespace Clubs.Api.CQRS.Queries
         public async Task<ClubQueryModel> GetClub(string clubId)
         {
             var clubQuery = "Select Id, Name, ClubId from Clubs Where ClubId = @clubId";
-            var club = await _dbConnection.QueryFirstAsync<ClubQueryModel>(clubQuery, new { clubId });
+            var club = await _dbConnection.QueryFirstOrDefaultAsync<ClubQueryModel>(clubQuery, new { clubId });
 
             if (club == null) return null;
 

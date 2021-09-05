@@ -69,7 +69,7 @@ namespace Clubs.Api.Controllers
             var isPlayerAvaiable = await _clubQueries.CheckPlayerAvaiable(playerId);
             if (!isPlayerAvaiable)
             {
-                return Conflict(new { Error = "Player is already belong to one club" });
+                return Conflict(new { Error = "Player is already member of one club" });
             }
 
             try
@@ -106,7 +106,7 @@ namespace Clubs.Api.Controllers
             var isPlayerAvaiable = await _clubQueries.CheckPlayerAvaiable(memberInput.PlayerId);
             if (!isPlayerAvaiable)
             {
-                return Conflict(new { Error = "Player is already belong to one club" });
+                return Conflict(new { Error = "Player is already member of one club" });
             }
 
             var addMemberCommand = new ClubAddMemberCommand(clubId, memberInput.PlayerId);
